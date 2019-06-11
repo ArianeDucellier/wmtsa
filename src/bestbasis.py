@@ -185,37 +185,3 @@ def decomposition(X, name, J, typecost, delta=0.5, p=1):
                     for l in range(0, np.shape(vectors)[1]):
                         b.append(vectors[:, l])
     return (w, b)
-
-if __name__ == '__main__':
-
-    # Test 1
-    def test1():
-        """
-        Reproduce example of Figures 224, 225, and 226 from WMTSA
-
-        Input:
-            None
-        Output:
-            None
-        """
-        X = np.array((2.0, 0.0, -1.0, 1.0, 0.0, 0.0, -2.0, 2.0))
-        print('Time series:\n')
-        print(X)
-        W = DWPT.get_DWPT(X, 'Haar', 3)
-        print('\nWavelet coefficients:\n')
-        print(W)
-        (base, cost) = bestbasis(W, X, 'entropy')
-        print('\nBest basis:\n')
-        print(base)
-        print('\nCost functionals:\n')
-        print(cost)
-        (w, b) = decomposition(X, 'Haar', 3, 'entropy')
-        print('\nDecomposition:\n')
-        for l in range(0, len(w)):
-            if (abs(w[l]) > 1.0e-10):
-                print(w[l])
-                print(b[l])
-
-    # Use best basis algorithm on a simple time series
-    # See Figures 224 to 226 in WMTSA
-    test1()
