@@ -1,0 +1,13 @@
+name: wmtsa
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyter
+  - jupyterlab
+  - notebook
+  - pandas
+  - python=3.6
+  - matplotlib
+  - numpy
+  - scipy
