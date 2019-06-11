@@ -20,10 +20,18 @@ Please click here to see examples from chapter 4:
 
 Please click here to see examples from chapter 5:
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArianeDucellier/wmtsa/master?filepath=notebooks%2Fchapter5.ipynb)
+
 ## Chapter 6: Discrete Wavelet Packet Transform
 
 Please click here to see examples from chapter 6:
 
-Please click here to see examples from chapter 6:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArianeDucellier/wmtsa/master?filepath=notebooks%2Fchapter6a.ipynb)
 
 Please click here to see examples from chapter 6:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArianeDucellier/wmtsa/master?filepath=notebooks%2Fchapter6b.ipynb)
+
+Please click here to see examples from chapter 6:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ArianeDucellier/wmtsa/master?filepath=notebooks%2Fchapter6c.ipynb)
