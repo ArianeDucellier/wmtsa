@@ -1,0 +1,42 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usetheme{Warsaw}
+\usepackage{tikz}
+
+\usetikzlibrary{arrows,positioning,shapes,shapes.multipart} 
+\tikzstyle{every picture}+=[remember picture]
+
+\definecolor{skyblue}{rgb}{0.8,0.8,0.95}
+
+\begin{document}
+
+	\begin{frame}
+		\begin{tikzpicture}
+			\node[align=center, draw, rectangle, fill=skyblue] (l1) {$X$};
+			\node[above right=0.5cm and 2cm of l1] (l2) [align=center, draw, rectangle, fill=skyblue] {$W_1$};
+			\node[below right=0.5cm and 2cm of l1] (l3) [align=center, draw, rectangle, fill=skyblue] {$V_1$};
+			\node[above right=0.5cm and 2cm of l3] (l4) [align=center, draw, rectangle, fill=skyblue] {$W_2$};
+			\node[below right=0.5cm and 2cm of l3] (l5) [align=center, draw, rectangle, fill=skyblue] {$V_2$};
+			\node[above right=0.5cm and 2cm of l5] (l6) [align=center, draw, rectangle, fill=skyblue] {$W_3$};
+			\node[below right=0.5cm and 2cm of l5] (l7) [align=center, draw, rectangle, fill=skyblue] {$V_3$};
+			\node[above right=0.5cm and 2cm of l7] (l8) [align=center, draw, rectangle, fill=skyblue] {$W_4$};
+			\node[below right=0.5cm and 2cm of l7] (l9) [align=center, draw, rectangle, fill=skyblue] {$V_4$};
+			\path[draw,->, line width=1pt] (l1.east) -- node[above=0.5cm,left] {High-pass} (l2.west);
+			\path[draw,->, line width=1pt] (l1.east) -- node[below=0.5cm,left] {Low-pass} (l3.west);
+			\path[draw,->, line width=1pt] (l3.east) -- node[above=0.5cm,left] {High-pass} (l4.west);
+			\path[draw,->, line width=1pt] (l3.east) -- node[below=0.5cm,left] {Low-pass} (l5.west);
+			\path[draw,->, line width=1pt] (l5.east) -- node[above=0.5cm,left] {High-pass} (l6.west);
+			\path[draw,->, line width=1pt] (l5.east) -- node[below=0.5cm,left] {Low-pass} (l7.west);
+			\path[draw,->, line width=1pt] (l7.east) -- node[above=0.5cm,left] {High-pass} (l8.west);
+			\path[draw,->, line width=1pt] (l7.east) -- node[below=0.5cm,left] {Low-pass} (l9.west);
+		\end{tikzpicture}
+	\end{frame}
+			
+\end{document}
