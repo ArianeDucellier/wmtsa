@@ -422,16 +422,19 @@ def compute_AB(a, j, N):
         'Level of the pyramid algorithm must be higher or equal to 1'
     assert (N % (2 ** j) == 0), \
         'Length of time series is not a multiple of 2**j'
-    L = len(a)
-    a0 = np.zeros(N)
-    nmax = int(L // N)
-    for t in range(0, N):
-        for n in range(0, nmax + 1):
-            if (t + n * N < L):
-                a0[t] = a0[t] + a[t + n * N]
+    # Create matrix
     Nj = int(N / (2 ** j))
     Njm1 = int(N / (2 ** (j - 1)))
     A = np.zeros((Nj, Njm1))
+    # Periodize to length Njm1
+    L = len(a)
+    a0 = np.zeros(Njm1)
+    nmax = int(floor((L - 1) / Njm1))
+    for t in range(0, Njm1):
+        for n in range(0, nmax + 1):
+            if (t + n * Njm1 < L):
+                a0[t] = a0[t] + a[t + n * Njm1]
+    # Fill matrix A with circularly shifted vector
     for t in range(0, Nj):
         for l in range(0, Njm1):
             index = int((2 * t + 1 - l) % Njm1)
