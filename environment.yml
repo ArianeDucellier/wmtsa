@@ -7,7 +7,7 @@ dependencies:
   - jupyterlab
   - notebook
   - pandas
-  - python=3.6
+  - python=3.8
   - matplotlib
   - numpy
   - scipy
